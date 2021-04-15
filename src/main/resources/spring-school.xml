@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+    <!-- 此处id和student中属性名称相同，则可直接使用byName来注入student对象 -->
+    <bean id="school" class="org.example.pojo.School">
+        <property name="name" value="海大"/>
+        <property name="address" value="临港区"/>
+    </bean>
+
+
+
+</beans>

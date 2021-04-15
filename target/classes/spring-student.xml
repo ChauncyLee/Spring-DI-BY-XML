@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <!--
+        注册bean对象
+        id:自定义对象的名称，通过id在代码中使用对象
+        class:类的全限定名称，不能是接口
+    -->
+
+    <!-- 多个spring配置文件 使用byName注入 -->
+    <bean id="studentMultiple" class="org.example.pojo.Student" autowire="byName">
+        <property name="name" value="王五"/>
+        <property name="age" value="25"/>
+        <!--      byName自动注入  <constructor-arg name="school" ref="mySchool"/>-->
+    </bean>
+
+</beans>
